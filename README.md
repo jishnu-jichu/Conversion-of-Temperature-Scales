@@ -4,4 +4,4 @@
     This program deals with the 3 main temperature scales.They are
     (i) Celsius Scale
     (ii) Fahrenheit Scale
-    {iii) Kelvin Scale    
+    (iii) Kelvin Scale    
