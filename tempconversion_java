@@ -1,0 +1,87 @@
+import java.util.Scanner;
+class conversion
+{
+	public void celtofar(double c)
+	{
+		double f=((9*c)/5)+32;
+		System.out.println("Temp in Fahreheit = "+f);
+	}
+	public void fartocel(double f)
+	{
+		double c=((f-32)*5)/9;
+		System.out.println("Temp in Celsius = "+c);
+	}
+	public void celtokel(double c)
+	{
+		double k=c+273.15;
+		System.out.println("Temp in Kelvin = "+k);
+	}
+	public void keltocel(double k)
+	{
+		double c=k-273.15;
+		System.out.println("Temp in Celsius = "+c);
+	}
+	public void fartokel(double f)
+	{
+		double c=((f-32)*5)/9;
+		double k=c+273.15;
+		System.out.println("Temp in Kelvin = "+k);
+	}
+	public void keltofar(double k)
+	{
+		double c=k-273.15;
+		double f=((9*c)/5)+32;
+		System.out.println("Temp in Fahreheit = "+f);
+	}
+		
+	
+}
+class temp
+{
+	public static void main(String Str[]) throws Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		conversion obj=new conversion();
+		int a=0;
+		while(a!=7)
+		{
+			System.out.println("Enter the choice");
+			System.out.println(" 1 Celsius To Fahrenheit\n 2 Fahrenheit To Celsius\n 3 Celsius To Kelvin\n 4 kelvin To Celsius\n 5 Fahrenheit To Kelvin\n 6 Kelvin To Fahrenheit\n 7 Exit\n");
+			a=sc.nextInt();
+			switch(a)
+			{
+				case 1: System.out.println("Enter the temperature in degree celsius");
+					double c=sc.nextDouble();
+					obj.celtofar(c);
+					break;
+				case 2: System.out.println("Enter the temperature in degree fahrenheit");
+					double f=sc.nextDouble();
+					obj.fartocel(f);
+					break;
+				case 3: System.out.println("Enter the temperature in degree celsius");
+					double cel=sc.nextDouble();
+					obj.celtokel(cel);
+					break;
+				case 4: System.out.println("Enter the temperature in degree kelvin");
+					double k=sc.nextDouble();
+					obj.keltocel(k);
+					break;
+				case 5: System.out.println("Enter the temperature in degree fahrenheit");
+					double far=sc.nextDouble();
+					obj.fartokel(far);
+					break;
+				case 6: System.out.println("Enter the temperature in degree kelvin");
+					double kel=sc.nextDouble();
+					obj.keltofar(kel);
+					break;
+				
+				case 7: System.out.println("Exiting...");
+					System.exit(0);
+					break;
+				
+				default: System.out.println("Enter the correct choice");
+					break;
+			}
+		}
+	}
+}
